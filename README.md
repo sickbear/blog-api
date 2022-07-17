@@ -24,7 +24,7 @@
 ## API Reference
 
 #### Получить список пользователей
-```http
+```bash
   GET /users
   GET /users?start_date=2022-07-16&end_date=2022-07-20
 ```
