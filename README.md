@@ -24,18 +24,18 @@
 ## API Reference
 
 #### Получить список пользователей
-```http
+```bash
   GET /users
   GET /users?start_date=2022-07-16&end_date=2022-07-20
 ```
 
 #### Получить пользователя со списком его постов и комментариев
-```http
+```bash
   GET /users/:id
 ```
 
 #### Создать пользователя
-```http
+```bash
   POST /users
 
 ```
@@ -44,7 +44,7 @@
 | `name` | `string` | Имя пользователя |
 
 #### Изменить пользователя
-```http
+```bash
   PUT /users/:id
 
 ```
@@ -53,14 +53,14 @@
 | `name` | `string` | Имя пользователя |
 
 #### Удалить пользователя
-```http
+```bash
   DELETE /users/:id
 
 ```
 
 
 #### Создать пост
-```http
+```bash
   POST /posts
 
 ```
@@ -71,7 +71,7 @@
 | `user_id` | `integer` | id пользователя |
 
 #### Изменить пост
-```http
+```bash
   PUT /posts/:id
 
 ```
@@ -82,12 +82,12 @@
 | `user_id` | `integer` | id пользователя |
 
 #### Удалить пост
-```http
+```bash
   DELETE /posts/:id
 
 ```
 #### Создать комментарий
-```http
+```bash
   POST /comments
 
 ```
@@ -99,7 +99,7 @@
 | `post_id` | `integer` | id поста |
 
 #### Удалить комментарий
-```http
+```bash
   DELETE /comments/:id
 ```
 
