@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     from = params[:start_date].present? ? params[:start_date] : DateTime.new(1970, 01, 01).to_fs
     to = params[:end_date].present? ? params[:end_date] : DateTime.current.to_fs
     @users = User.where(:created_at => from..to)
-    render json: @users  
+    render json: @users, status: 201
   end
 
   def show
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     begin
       @user.destroy
     rescue ActiveRecord::InvalidForeignKey => e
-      render json: {'error': e}
+      render json: {'error': e}, status: 403
     end
   end
 

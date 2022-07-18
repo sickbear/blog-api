@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      render json: @post
+      render json: @post, status: 201
     else
       render json: {'error': 'could not create it'}
     end
