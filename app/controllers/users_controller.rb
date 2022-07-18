@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       render json: @user
     else
-      render json: {'error': 'could not create it'}
+      render json: {'error': 'could not create it'}, status: 400
     end
   end
 
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       render json: @user
     else
-      render json: {'error': 'could not update it'}
+      render json: {'error': 'could not update it'}, status: 400
     end
   end
 

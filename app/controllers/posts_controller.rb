@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     if @post.save
       render json: @post, status: 201
     else
-      render json: {'error': 'could not create it'}
+      render json: {'error': 'could not create it'}, status: 400
     end
   end
 
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       render json: @post
     else
-      render json: {'error': 'could not update it'}
+      render json: {'error': 'could not update it'}, status: 400
     end
   end
 

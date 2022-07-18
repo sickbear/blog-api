@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       render json: @comment, status: 201
     else
-      render json: {'error': 'could not create it'}
+      render json: {'error': 'could not create it'}, status: 400
     end
   end
 
